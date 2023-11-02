@@ -8,6 +8,8 @@ async function fetchData(){
     const responseContent = await response.json();
     console.log(responseContent.Response);
     if(responseContent.Response==="True"){
+        sectionContent.innerHTML="";
+        sectionContent.style="display:grid;"
         for(let i=0; i<responseContent.Search.length; i++){
             const addArticle = document.createElement("article");
             const addH2 = document.createElement("h2");
@@ -20,6 +22,7 @@ async function fetchData(){
             addImg.setAttribute("src", responseContent.Search[i].Poster);
         }
     } else {
-        sectionContent.innerHTML="To Many Result, Need To Be More Specific!";
+        sectionContent.innerText=responseContent.Error;
+        sectionContent.style="text-align:center; margin:auto; display:block;"
     };
 }

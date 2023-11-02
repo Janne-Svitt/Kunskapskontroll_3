@@ -1,0 +1,23 @@
+#sectionContent{
+    margin: auto;
+    grid-template-columns: 2fr 2fr 2fr;
+    text-align: center;
+}
+
+article{
+    margin-bottom: 40px;
+}
+
+#sectionSearch{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+#sectionSearch input{
+    width: 40%;
+    margin: auto;
+}
+
+hr{
+    margin: 60px;
+}
